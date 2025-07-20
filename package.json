@@ -1,0 +1,86 @@
+{
+  "name": "turborepo-remote-cache",
+  "description": "An implementation of the turborepo-remote-cache server custom made for Cloudflare Workers",
+  "keywords": [
+    "serverless",
+    "remote-caching",
+    "cloudflare-workers",
+    "vercel",
+    "turborepo",
+    "cloudflare-r2"
+  ],
+  "version": "3.2.0",
+  "author": {
+    "email": "adiswa123@gmail.com",
+    "name": "Adishwar Rishi",
+    "url": "https://github.com/AdiRishi"
+  },
+  "homepage": "https://github.com/AdiRishi/turborepo-remote-cache-cloudflare",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AdiRishi/turborepo-remote-cache-cloudflare.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AdiRishi/turborepo-remote-cache-cloudflare/issues"
+  },
+  "license": "MIT",
+  "readme": "README.md",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "deploy": "wrangler deploy",
+    "test": "vitest run --coverage",
+    "test:ui": "vitest --coverage --ui",
+    "test:watch": "vitest",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.5.1",
+    "@changesets/cli": "^2.29.5",
+    "@cloudflare/vite-plugin": "^1.9.6",
+    "@cloudflare/vitest-pool-workers": "^0.8.55",
+    "@cloudflare/workers-types": "^4.20250719.0",
+    "@eslint/js": "^9.31.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/eslint": "^9.6.1",
+    "@vitest/coverage-istanbul": "3.2.4",
+    "@vitest/ui": "3.2.4",
+    "eslint": "^9.31.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.3",
+    "miniflare": "^4.20250712.0",
+    "prettier": "^3.6.2",
+    "rollup-plugin-visualizer": "^6.0.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.37.0",
+    "vite": "^7.0.5",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitepress": "1.6.3",
+    "vitest": "3.2.4",
+    "wrangler": "^4.25.0"
+  },
+  "dependencies": {
+    "@hono/valibot-validator": "^0.5.3",
+    "hono": "^4.8.5",
+    "valibot": "^1.1.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "workerd"
+    ]
+  },
+  "packageManager": "pnpm@10.13.1"
+}
